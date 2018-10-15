@@ -1,6 +1,6 @@
 import express from 'express';
-import { postgres as db } from './db';
-import exampleController from './controllers/exampleController';
+import database from './src/database';
+import exampleController from './src/controllers/exampleController';
 
 const router = express();
 
@@ -8,6 +8,6 @@ router.get('/', (req, res) => {
   res.send({});
 });
 
-exampleController(router, db);
+exampleController(router, database);
 
 router.listen(3000, () => console.log('Example app listening on port 3000!'));
