@@ -1,5 +1,5 @@
 import express from 'express';
-import database from './src/database';
+import { postgresql as database } from './src/config';
 import exampleController from './src/controllers/exampleController';
 
 const router = express();
