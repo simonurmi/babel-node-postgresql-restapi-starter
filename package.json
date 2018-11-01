@@ -1,5 +1,5 @@
 {
-  "name": "babel-node-restapi-starter",
+  "name": "babel-node-postgresql-restapi-starter",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
