@@ -7,6 +7,15 @@ const exampleController = (router, db) => {
       throw error;
     }
   });
+
+  router.post('/api/example', async (req, res) => {
+    try {
+      const { body } = req;
+      res.send(body);
+    } catch (error) {
+      throw error;
+    }
+  });
 };
 
 export default exampleController;
