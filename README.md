@@ -1,4 +1,4 @@
-# babel-node-restapi-starter
+# babel-node-postgresql-restapi-starter
 
 Requires NodeJS 9 unless you change async/awaits to Promises or callbacks.
 
