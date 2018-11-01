@@ -1,6 +1,21 @@
+import dotenv from 'dotenv';
 import express from 'express';
-import { postgresql as database } from './src/config';
+import { Pool } from 'pg';
 import exampleController from './src/controllers/exampleController';
+
+dotenv.config();
+
+const {
+  DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD,
+} = process.env;
+
+const database = new Pool({
+  host: DB_HOST,
+  database: DB_DATABASE,
+  port: DB_PORT,
+  user: DB_USERNAME,
+  password: DB_PASSWORD,
+});
 
 const router = express();
 
