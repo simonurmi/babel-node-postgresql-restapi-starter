@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
-import express from 'express';
 import { Pool } from 'pg';
+import express from 'express';
+import bodyParser from 'body-parser';
 import exampleController from './src/controllers/exampleController';
 
 dotenv.config();
@@ -18,6 +19,9 @@ const database = new Pool({
 });
 
 const router = express();
+
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
 
 router.get('/', (req, res) => {
   res.send({});
